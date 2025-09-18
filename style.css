@@ -1,0 +1,204 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+/* Title & authors */
+.title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 2rem 1rem; /* ✅ added padding */
+}
+
+.title h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+  margin-bottom: 1.5rem;
+}
+
+.authors-list {
+  font-size: 1rem;
+  color: #555;
+}
+
+.authors-list p {
+  margin: 0.2rem 0;
+}
+
+.footnote {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Links (GitHub, arXiv) */
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ responsive */
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.github-link {
+  background-color: #24292f;
+  color: #fff;
+}
+
+.github-link:hover {
+  background-color: #000;
+}
+
+.arxiv-link {
+  background-color: #e0e0e0;
+  color: #222;
+}
+
+.arxiv-link:hover {
+  background-color: #ccc;
+}
+
+/* Abstract */
+.abstract {
+  margin: 2.5rem 0;
+}
+
+.abstract h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #222;
+  padding-left: 0.6rem;
+}
+
+.abstract p {
+  font-size: 1rem;
+  text-align: justify;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Images */
+img {
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  max-width: 100%; /* ✅ responsive */
+  height: auto;
+}
+
+/* Video */
+iframe {
+  display: block;
+  margin: 2rem auto;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  width: 100%;  /* ✅ responsive */
+  max-width: 700px;
+  height: 400px;
+}
+
+/* Citation box */
+.citation {
+  margin: 3rem 0;
+}
+
+.citation h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #222;
+  padding-left: 0.6rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fdfdfd;
+  resize: none;
+  color: #333;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #888;
+  background: #fff;
+}
+
+/* Small improvements */
+sup {
+  font-size: 0.7em;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.3);
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 1.8rem;
+  }
+  .abstract h3,
+  .citation h3 {
+    font-size: 1.2rem;
+  }
+  iframe {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    padding: 1.5rem 1rem;
+  }
+  .title h1 {
+    font-size: 1.5rem;
+  }
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
